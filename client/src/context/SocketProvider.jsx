@@ -9,7 +9,8 @@ export const useSocket = () => {
 };
 
 export const SocketProvider = (props) => {
-  const socket = useMemo(() => io("http://localhost:9000"), []);
+  console.log("Socket Connection Extablish Successfully!")
+  const socket = useMemo(() => io(process.env.REACT_APP_SERVER_URL), []);
 
   return (
     <SocketContext.Provider value={socket}>

@@ -56,7 +56,7 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
-  const Host ="http://localhost"
-server.listen(PORT, () => {
-  console.log(`Server is running on port ${Host}:${PORT}`);
+
+server.listen(process.env.Port, () => {
+  console.log(`Server is running on port ${process.env.Host}:${process.env.Port}`);
 });
