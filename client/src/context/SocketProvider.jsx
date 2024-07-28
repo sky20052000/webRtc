@@ -10,7 +10,7 @@ export const useSocket = () => {
 
 export const SocketProvider = (props) => {
   console.log("Socket Connection Extablish Successfully!")
-  const socket = useMemo(() => io("https://webrtc-q7g5.onrender.com:9000"), []);
+  const socket = useMemo(() => io("https://webrtc-q7g5.onrender.com"), []);
 
   return (
     <SocketContext.Provider value={socket}>
