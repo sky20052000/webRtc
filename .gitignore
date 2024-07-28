@@ -1,3 +1,8 @@
-/node_modules
 /client/node_modules
 /server/node_modules
+
+# Ignore environment variable files
+/server/.env
+
+# Ignore build output
+/client/build
